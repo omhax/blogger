@@ -265,6 +265,59 @@
 		#id-konten.class-konten.section {
 		width:100%;
 		}
+		/* Post Feeds Beranda*/
+		.post-image {
+		height: 200px;
+		overflow: hidden;
+		}
+		.post-image a img {
+		object-fit: cover;
+		height:auto;
+		width:100%;
+		margin: -19px 0 0 0;
+		padding:0;
+		}
+		#post-beranda {
+		color:#fff;
+		background-color:#ccc;
+		width:100%;
+		padding: 0;
+		margin: 0;
+		}
+		#post-beranda h3 {
+		display:block;
+		padding: 20px;
+		background-color:#636d8a;
+		}
+		#post-beranda a:link {
+		color:#fff;
+		text-decoration:none;
+		padding: 0;
+		margin-left: 0;
+		}
+		#post-beranda a:hover {
+		color:#fff;
+		text-decoration:underline;
+		}
+		#post-beranda a:visited {
+		color:#fff;
+		text-decoration:none;
+		}
+		.bk-meta-tanggal-desktop {
+		display:block;
+		color:#FFF;
+		font-family: &#39;Monda&#39;, sans-serif;
+		font-weight: normal;
+		font-size: 14px;
+		padding: 8px 20px 8px 20px;
+		background-color:#eb6f49;
+		}
+		.snippet-beranda {
+		color:#000;
+		background-color:#FFF;
+		display:block;
+		padding: 20px;
+		}
 		/* Sidebar */
 		#sidebar {
 		display: block;
@@ -292,16 +345,12 @@
 		#blog-pager {
 		margin: 1em !important;
 		}
-		</style>
-		<b:if cond='data:view.isHomepage'>
-		<style>
-      	/* Hidden Item Beranda */
+      	/* Hidden Item Global */
         h3.post-title.entry-title, .jump-link, .post-footer, .blog-feeds {
 		display:none;
 		visibility:hidden;
 		}
 		</style>
-		</b:if>
 	</head>
 	<body>
 		<div id='kontainer'>
@@ -922,60 +971,6 @@
     <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' expr:itemprop='(data:blog.metaDescription ? &quot;&quot; : &quot;description &quot;) + &quot;articleBody&quot;'>
 <b:if cond='data:blog.pageType != &quot;item&quot;'>
 <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-<style>
-.post-image {
-	height: 200px;
-	overflow: hidden;
-}
-.post-image a img {
-	object-fit: cover;
-	height:auto;
-	width:100%;
-	margin: -19px 0 0 0;
-	padding:0;
-}
-#post-beranda {
-	color:#fff;
-	background-color:#ccc;
-	width:100%;
-	padding: 0;
-	margin: 0;
-}
-#post-beranda h3 {
-	display:block;
-	padding: 20px;
-	background-color:#636d8a;
-}
-#post-beranda a:link {
-	color:#fff;
-	text-decoration:none;
-	padding: 0;
-	margin-left: 0;
-}
-#post-beranda a:hover {
-	color:#fff;
-	text-decoration:underline;
-}
-#post-beranda a:visited {
-	color:#fff;
-	text-decoration:none;
-}
-.bk-meta-tanggal-desktop {
-	display:block;
-	color:#FFF;
-	font-family: &#39;Monda&#39;, sans-serif;
-	font-weight: normal;
-	font-size: 14px;
-	padding: 8px 20px 8px 20px;
-	background-color:#eb6f49;
-}
-.snippet-beranda {
-	color:#000;
-	background-color:#FFF;
-	display:block;
-	padding: 20px;
-}
-</style>
 <div id='post-beranda'>
 		<b:if cond='data:post.title'>
 		<h3 itemprop='name headline'>
