@@ -303,7 +303,7 @@
 		color:#fff;
 		text-decoration:none;
 		}
-		.bk-meta-tanggal-desktop {
+		.tanggal-beranda {
 		display:block;
 		color:#FFF;
 		font-family: &#39;Monda&#39;, sans-serif;
@@ -992,7 +992,7 @@
 		<div class='snippet-beranda'>
   		<data:post.snippet/>
 		</div>
-		<span class='bk-meta-tanggal-desktop'>
+		<span class='tanggal-beranda'>
 <b:if cond='data:top.showTimestamp'>
 <b:if cond='data:post.url'>
 <a expr:href='data:post.url' title='Link Tanggal'><data:post.timestamp/></a>
