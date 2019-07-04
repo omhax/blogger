@@ -306,7 +306,6 @@
 		.tanggal-beranda {
 		display:block;
 		color:#FFF;
-		font-family: &#39;Monda&#39;, sans-serif;
 		font-weight: normal;
 		font-size: 14px;
 		padding: 8px 20px 8px 20px;
@@ -356,7 +355,7 @@
 		<div id='kontainer'>
 			<!-- Header -->
 			<div id='kepala'>
-				<b:section class='class-kepala' id='id-kepala' maxwidgets='1' name='Kepala' showaddelement='yes'>
+				<b:section class='class-kepala' id='id-kepala' maxwidgets='' name='Kepala' showaddelement='yes'>
 <b:widget id='Header1' locked='true' title='Haikew (Header)' type='Header'>
   <b:widget-settings>
     <b:widget-setting name='displayUrl'/>
