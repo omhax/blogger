@@ -411,14 +411,14 @@
         padding: 0 !important;
         }
         .post-body.entry-content .separator a img {
-        max-width:100%;
-        height:100%;
+        width:100%;
+        height:auto;
         margin: 0;
         padding:5px 0 0 0;
         }
         .post-body.entry-content table.tr-caption-container tbody tr td a img {
-        max-width:100%;
-        height:100%;
+        width:100%;
+        height:auto;
         margin: 0;
         padding:5px 0 0 0;
         }
