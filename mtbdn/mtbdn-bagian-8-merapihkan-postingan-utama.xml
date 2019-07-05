@@ -400,13 +400,13 @@
         }
         .post-body.entry-content table.tr-caption-container {
         width:100%;
-        height:100%;
+        height:auto;
         margin: 0 !important;
         padding: 5px 0 !important;
         }
         .post-body.entry-content .separator a, .post-body.entry-content table.tr-caption-container tbody tr td a {
         width:100%;
-        height:100%;
+        height:auto;
         margin: 0 !important;
         padding: 0 !important;
         }
