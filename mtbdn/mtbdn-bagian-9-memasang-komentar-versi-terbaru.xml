@@ -112,7 +112,7 @@
 		</b:template-skin>
 		<b:skin><![CDATA[
     <!-- Variable definitions -->
-    <Group description="Komentar Baru Blogger (Contempo, Soho, Emporio, Notable)">
+    <Group description="Comments Box">
       <Variable name="body.background" description="Body Background" type="background" color="#dddfe2" default="#dddfe2 none repeat scroll top left" value="#dddfe2 none repeat scroll top left"/>
       <Variable name="body.font" description="Font" type="font" default="normal 400 14px Roboto, Arial, sans-serif" value="normal 400 14px Arial,sans-serif"/>
       <Variable name="body.text.color" description="Text Color" type="color" default="#1d2129" value="#1d2129"/>
