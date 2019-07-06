@@ -114,20 +114,20 @@
     <!-- Variable definitions -->
     <Group description="Comments Box">
       <Variable name="body.background" description="Body Background" type="background" color="#dddfe2" default="#dddfe2 none repeat scroll top left" value="#dddfe2 none repeat scroll top left"/>
-      <Variable name="body.font" description="Font" type="font" default="normal 400 14px Roboto, Arial, sans-serif" value="normal 400 14px Arial,sans-serif"/>
+      <Variable name="body.font" description="Font" type="font" default="normal 400 14px Roboto, Arial, sans-serif" value="normal 400 14px Roboto, Arial, sans-serif"/>
       <Variable name="body.text.color" description="Text Color" type="color" default="#1d2129" value="#1d2129"/>
       <Variable name="body.text.font" description="1"
       type="font"
-      default="$(body.font)" value="normal 400 14px Roboto,Arial,sans-serif"/>
+      default="$(body.font)" value="normal 400 14px Roboto, Arial, sans-serif"/>
       <Variable name="posts.background.color" description="2"
       type="color"
       default="#fff" value="#ffffff"/>
       <Variable name="body.link.color" description="3"
       type="color"
-      default="#008c5f" value="#008c5f"/>
+      default="#008c5f" value="#3d85c6"/>
       <Variable name="body.link.visited.color" description="4"
       type="color"
-      default="#008c5f" value="#008c5f"/>
+      default="#008c5f" value="#3d85c6"/>
       <Variable name="body.link.hover.color" description="5"
       type="color"
       default="#1d2129" value="#1d2129"/>
@@ -142,7 +142,7 @@
       default="#fff" value="#ffffff"/>
       <Variable name="tabs.font" description="9"
       type="font"
-      default="$(body.text.font)" value="normal 400 14px Arial,sans-serif"/>
+      default="$(body.text.font)" value="normal 400 14px Roboto, Arial, sans-serif"/>
       <Variable name="tabs.color" description="10"
       type="color"
       default="#ccc" value="#cccccc"/>
@@ -163,19 +163,19 @@
       default="$(body.text.color)" value="#1d2129"/>
       <Variable name="posts.title.font" description="16"
       type="font"
-      default="$(body.text.font)" value="normal 400 14px Arial,sans-serif"/>
+      default="$(body.text.font)" value="normal 400 14px Roboto, Arial, sans-serif"/>
       <Variable name="posts.text.font" description="17"
       type="font"
-      default="$(body.text.font)" value="normal 400 14px Arial,sans-serif"/>
+      default="$(body.text.font)" value="normal 400 14px Roboto, Arial, sans-serif"/>
       <Variable name="posts.text.color" description="18"
       type="color"
       default="$(body.text.color)" value="#1d2129"/>
       <Variable name="posts.icons.color" description="19"
       type="color"
-      default="$(body.text.color)" value="#6c6f74"/>
+      default="$(body.text.color)" value="#1d2129"/>
       <Variable name="labels.background.color" description="20"
       type="color"
-      default="#008c5f" value="#008c5f"/>
+      default="#008c5f" value="#3d85c6"/>
     </Group>
     ]]></b:skin>
 		<style>
@@ -596,12 +596,12 @@
     <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
     <b:widget-setting name='backlinksLabel'>Links to this post</b:widget-setting>
     <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-    <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+    <b:widget-setting name='style.textcolor'>#3d85c6</b:widget-setting>
     <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-    <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+    <b:widget-setting name='style.urlcolor'>#1d2129</b:widget-setting>
     <b:widget-setting name='postLocationLabel'>Location:</b:widget-setting>
     <b:widget-setting name='showAuthor'>false</b:widget-setting>
-    <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+    <b:widget-setting name='style.linkcolor'>#1d2129</b:widget-setting>
     <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
     <b:widget-setting name='showLabels'>true</b:widget-setting>
     <b:widget-setting name='postLabelsLabel'>Labels:</b:widget-setting>
@@ -699,13 +699,13 @@
         <a expr:id='data:widget.instanceId + &quot;_comment-editor-toggle-link&quot;' href='javascript:void(0)'><data:postCommentMsg/></a></h4>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc appendParams {skin: "contempo"}' id='comment-editor-src'/>
+      <a expr:href='data:post.commentFormIframeSrc appendParams {skin: &quot;contempo&quot;}' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
       <h4 id='comment-post-message'><data:postCommentMsg/></h4>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc appendParams {skin: "contempo"}' id='comment-editor-src'/>
+      <a expr:href='data:post.commentFormIframeSrc appendParams {skin: &quot;contempo&quot;}' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
     </b:if>
     <data:post.cmtfpIframe/>
@@ -1317,12 +1317,12 @@
     <b:if cond='data:mobile'>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc appendParams {skin: "contempo"}' id='comment-editor-src'/>
+      <a expr:href='data:post.commentFormIframeSrc appendParams {skin: &quot;contempo&quot;}' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
     <b:else/>
       <p><data:blogCommentMessage/></p>
       <data:blogTeamBlogMessage/>
-      <a expr:href='data:post.commentFormIframeSrc appendParams {skin: "contempo"}' id='comment-editor-src'/>
+      <a expr:href='data:post.commentFormIframeSrc appendParams {skin: &quot;contempo&quot;}' id='comment-editor-src'/>
       <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
     </b:if>
     <data:post.cmtfpIframe/>
