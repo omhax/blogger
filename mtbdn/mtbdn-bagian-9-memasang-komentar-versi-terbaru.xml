@@ -3,6 +3,7 @@
 <html b:css='false' b:layoutsVersion='3' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:og='http://ogp.me/ns#'>
 	<head>
 		<link href='https://www.blogger.com/static/v1/widgets/3957297643-widget_css_bundle.css' rel='stylesheet' type='text/css'/>
+		<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet'/>
 		<b:include data='blog' name='all-head-content'/>
 		<b:if cond='data:blog.pageType == &quot;index&quot;'>
 		<title>
@@ -429,27 +430,27 @@
         }
         .post-body.entry-content {
         padding: 20px;
-        font: normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+        font-family: &#39;PT Serif&#39;, serif;
         color: #313131;
-        font-size: 18px;
+        font-size:normal;
         line-height: 1.7;
         }
         .post-body h2 {
         font-size: xx-large;
-        margin-top: 23px;
-        margin-bottom: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
         font-weight:bold;
         }
         .post-body h3 {
         font-size: x-large;
-        margin-top: 23px;
-        margin-bottom: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
         font-weight:bold;
         }
         .post-body h4 {
         font-size: large;
-        margin-top: 23px;
-        margin-bottom: 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         font-weight:bold;
         }
         .post-body ul {
