@@ -386,42 +386,6 @@
         font-weight:bold;
         }
         .post-body ul {
-        <b:if cond='data:view.isSingleItem'>
-        <style>
-        /* Single Post */
-        #post-utama h3 {
-        color:#FFF;
-        display:block;
-        padding: 20px;
-        background-color:#636d8a;
-        visibility:visible;
-        }
-        .post-body.entry-content {
-        padding: 20px;
-        font: normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-        color: #313131;
-        font-size: 18px;
-        line-height: 1.7;
-        }
-        .post-body h2 {
-        font-size: xx-large;
-        margin-top: 23px;
-        margin-bottom: 0;
-        font-weight:bold;
-        }
-        .post-body h3 {
-        font-size: x-large;
-        margin-top: 23px;
-        margin-bottom: 0;
-        font-weight:bold;
-        }
-        .post-body h4 {
-        font-size: large;
-        margin-top: 23px;
-        margin-bottom: 2px;
-        font-weight:bold;
-        }
-        .post-body ul {
         margin: 15px 15px 15px 20px;
         padding: 0;
         }
@@ -459,6 +423,7 @@
         padding:5px 0 0 0;
         }
         </style>
+        </b:if>
 	</head>
 	<body>
 		<div id='kontainer'>
