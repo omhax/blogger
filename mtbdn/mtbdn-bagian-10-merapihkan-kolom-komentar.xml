@@ -298,7 +298,7 @@
 		text-decoration: underline;
 		}
 		a:visited {
-		color: #2A78B8;
+		color: #CCC;
 		text-decoration: none;
 		}
 		a img {
@@ -327,6 +327,7 @@
 		/* Konten */
 		#konten {
 		display: block;
+		background-color:#FFF;
 		float: left;
 		width: 70%;
 		}
@@ -391,7 +392,7 @@
         font-weight: normal;
         font-size: normal;
         margin: 0;
-		padding: 20px 0 0 0;
+		padding: 0 20px;
         }
 		#comments.comments a:link {
 		color: #333;
@@ -406,14 +407,13 @@
 		text-decoration: none;
 		}
         #comments.comments h4 {
-        font-family: &#39;PT Serif&#39;, serif;
         color: #333;
         font-size: large;
         font-weight: normal;
         letter-spacing: 0px;
         word-spacing: -1px;
         text-transform: none;
-        padding: 0 0 20px 0;
+        padding: 0;
         }
         #comments.comments .comment-form h4#comment-post-message {
 		display:none;
@@ -431,12 +431,9 @@
 		}
         #comments.comments .comment-thread.toplevel-thread ol#top-ra li.comment {
 		max-width: 100%;
-		background-color:#fafafa;
 		padding:20px !important;
-		margin-bottom:20px;
-		margin-left:55px;
-		border:1px solid #ccc;
-		border-radius:5px;
+		margin-left:35px;
+		border:0px solid #ccc;
 		}
         #comments.comments .comment-block {
 		max-width: 100%;
@@ -561,10 +558,8 @@
 		width:100%;
 		}
 		/* Navigasi */
-		#blog-pager.blog-pager {
-		background-color:#FFF;
-		padding: 1em;
-		margin:0 !important;
+		#blog-pager {
+		margin: 1em !important;
 		}
         /* Hidden Item Global */
         h3.post-title.entry-title, .jump-link, .post-footer, .blog-feeds, .post-feeds, #backlinks-container, .widget-item-control {
@@ -583,7 +578,6 @@
         visibility:visible;
         }
         .post-body.entry-content {
-		background-color:#FFF;
         padding: 20px;
         font-family: &#39;PT Serif&#39;, serif;
         color: #313131;
@@ -645,11 +639,6 @@
         margin: 0;
         padding:5px 0 0 0;
         }
-		/* Single Post Hidden Item */
-        #blog-pager.blog-pager {
-		display:none;
-		visibility:hidden;
-		}
         </style>
         </b:if>
 	</head>
@@ -658,7 +647,7 @@
 			<!-- Header -->
 			<div id='kepala'>
 				<b:section class='class-kepala' id='id-kepala' maxwidgets='' name='Kepala' showaddelement='yes'>
-<b:widget id='Header1' locked='true' title='Haikew (Header)' type='Header'>
+<b:widget id='Header1' locked='true' title='Atomori (Header)' type='Header'>
   <b:widget-settings>
     <b:widget-setting name='displayUrl'/>
     <b:widget-setting name='displayHeight'>0</b:widget-setting>
