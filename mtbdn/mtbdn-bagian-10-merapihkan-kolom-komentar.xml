@@ -413,7 +413,7 @@
         letter-spacing: 0px;
         word-spacing: -1px;
         text-transform: none;
-        padding: 0;
+        padding: 0 0 20px 0;
         }
         #comments.comments .comment-form h4#comment-post-message {
 		display:none;
@@ -422,8 +422,8 @@
         #comments.comments .comment-footer, .comments .comments-content {
         margin: 0;
         }
-        #comments.comments .comments .comments-content .comment-thread {
-        margin: 0;
+        #comments.comments .comments-content .comment-thread {
+        margin: 0 !important;
         }
         #comments.comments .comment-thread.toplevel-thread ol {
 		position:relative;
@@ -431,8 +431,8 @@
 		}
         #comments.comments .comment-thread.toplevel-thread ol#top-ra li.comment {
 		max-width: 100%;
-		padding:20px !important;
-		margin-left:35px;
+		padding:0 !important;
+		margin: 0 0 20px 55px;
 		border:0px solid #ccc;
 		}
         #comments.comments .comment-block {
@@ -459,22 +459,17 @@
 		left:0;
 		}
 		#comments.comments .comments-content #comment-holder .comment-thread.toplevel-thread ol#top-ra li.comment .comment-replies .comment-thread.inline-thread ol.thread-chrome.thread-expanded .comment-block {
-		margin: 0 0 -5px 37px;
+		margin: 0 0 0 55px;
 		}
         #comments.comments .comment-replies .comment-thread.inline-thread ol.thread-chrome.thread-expanded div li.comment {
-		border-top:1px dashed #333 !important;
-		border-bottom:0px !important;
-		border-left:0px !important;
-		border-right:0px !important;
         margin-top: 20px !important;
-        margin-bottom: -20px !important;
 		}
         #comments.comments .thread-toggle.thread-expanded {
 		display:none;
 		visibility:hidden;
 		}
         #comments.comments .continue {
-		margin: 20px 0 0 0;
+		margin: 10px 0 0 0;
 		border: none !important;
 		}
         #comments.comments .continue a {
@@ -1737,6 +1732,132 @@
     </div>
   </div>
   <b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+<b:widget id='Label1' locked='false' title='Label' type='Label'>
+  <b:widget-settings>
+    <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
+    <b:widget-setting name='display'>CLOUD</b:widget-setting>
+    <b:widget-setting name='selectedLabelsList'/>
+    <b:widget-setting name='showType'>ALL</b:widget-setting>
+    <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+</b:widget>
+<b:widget id='BlogArchive1' locked='false' title='Arsip Blog' type='BlogArchive'>
+  <b:widget-settings>
+    <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+    <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+    <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+    <b:widget-setting name='monthPattern'>MMMM</b:widget-setting>
+    <b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+    <b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+    <b:widget-setting name='chronological'>false</b:widget-setting>
+    <b:widget-setting name='showPosts'>true</b:widget-setting>
+    <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+  <div id='ArchiveList'>
+  <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
+    <b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
+    <b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
+    <b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
+  </div>
+  </div>
+  <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  <b:includable id='flat' var='data'>
+  <ul class='flat'>
+    <b:loop values='data:data' var='i'>
+      <li class='archivedate'>
+        <a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+  <b:includable id='interval' var='intervalData'>
+  <b:loop values='data:intervalData' var='interval'>
+    <ul class='hierarchy'>
+      <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+        <b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+        <a class='post-count-link' expr:href='data:interval.url'>
+          <data:interval.name/>
+        </a>
+        <span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+        <b:include cond='data:interval.data' data='interval.data' name='interval'/>
+        <b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+      </li>
+    </ul>
+  </b:loop>
+</b:includable>
+  <b:includable id='menu' var='data'>
+  <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
+    <option value=''><data:title/></option>
+    <b:loop values='data:data' var='i'>
+      <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
+    </b:loop>
+  </select>
+</b:includable>
+  <b:includable id='posts' var='posts'>
+  <ul class='posts'>
+    <b:loop values='data:posts' var='post'>
+      <li><a expr:href='data:post.url'><data:post.title/></a></li>
+    </b:loop>
+  </ul>
+</b:includable>
+  <b:includable id='toggle' var='interval'>
+  <a class='toggle' href='javascript:void(0)'>
+    <span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+      <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+        &#9660;&#160;
+      <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+        &#9668;&#160;
+      <b:else/>
+        &#9658;&#160;
+      </b:if>
+    </span>
+  </a>
 </b:includable>
 </b:widget>
 </b:section>
