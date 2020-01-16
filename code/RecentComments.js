@@ -14,7 +14,7 @@ function mementomag_recent_comment(a) {
         if (m == a.feed.entry.length) break;
         e += "<li>";
         for (var h = a.feed.entry[m], u = 0; u < h.link.length; u++) "alternate" == h.link[u].rel && (c = h.link[u].href);
-        for (var p = 0; p < h.title.length; p++) f = h.title[p].name.$t, g = h.author[p].gd$image.src;
+        for (var p = 0; p < h.author.length; p++) f = h.title[p].name.$t, g = h.author[p].gd$image.src;
         g = -1 != g.indexOf("/s1600/") ? g.replace("/s1600/", "/s" + avatarSize + "-c/") : -1 != g.indexOf("/s220/") ? g.replace("/s220/", "/s" + avatarSize + "-c/") : -1 != g.indexOf("/s512-c/") && 0 != g.indexOf("") ? "" + g.replace("/s512-c/", "/s" + avatarSize + "-c/") : -1 != g.indexOf("blogblog.com/img/b16-rounded.gif") ? "https://cdn.statically.io/gh/xysrgithub/blogger/c54527df/img/user-s85.png" : -1 != g.indexOf("blogblog.com/img/openid16-rounded.gif") ? "https://cdn.statically.io/gh/xysrgithub/blogger/c54527df/img/user-s85.png" : -1 != g.indexOf("blogblog.com/img/blank.gif") ? -1 != defaultAvatar.indexOf("gravatar.com") ? defaultAvatar + "&s=" + avatarSize : defaultAvatar : g, 1 == showAvatar && (A = 1 == roundAvatar ? "avatarImage" : "", e += '<div class="avatarClass"><img class="' + A + '" src="' + g + '" alt="' + f + '" title="' + f + '" width="' + avatarSize + '" height="' + avatarSize + '"/></div>'), e += '<a class="author" target="_blank" title="' + f + '" href="' + c + '">' + f + "</a>";
         var k = h.content.$t,
             x = k.replace(/(<([^>]+)>)/gi, "");
